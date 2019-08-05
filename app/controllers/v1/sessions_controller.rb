@@ -5,15 +5,22 @@ class V1::SessionsController < ApplicationController
     user = User.where(email: params[:email]).first
 
     if user&.valid_password?(params[:password]) # user && user.valid_password?
-      render json: user.as_json(only: [:id, :email]), status: :created
+      render json: user.as_json(only: [:authentication_token, :email]), status: :created
     else
       head(:unauthorized)
     end
 
-
   end
   
   def destroy
+  
+    current_user.authentication_token = nil #WHAT
+    if current_user.save
+      head(:ok)
+    else
+      head(:unauthorized)
+    end
+
   end
 
 
