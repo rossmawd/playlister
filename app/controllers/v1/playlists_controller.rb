@@ -1,6 +1,6 @@
 class V1::PlaylistsController < ApplicationController
   def index
-  
+    #byebug
     @playlists = Playlist.all
 
     render json: @playlists, status: :ok

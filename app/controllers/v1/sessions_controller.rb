@@ -14,7 +14,7 @@ class V1::SessionsController < ApplicationController
   
   def destroy
   
-    current_user.authentication_token = nil #WHAT
+    current_user&.authentication_token = nil #WHAT
     if current_user.save
       head(:ok)
     else
