@@ -28,6 +28,10 @@ Rails.application.configure do
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
 
+  #DEVISE: recommendation for Rails API mode
+  Rails.application.config.middleware.insert_before Warden::Manager, ActionDispatch::Cookies
+Rails.application.config.middleware.insert_before Warden::Manager, ActionDispatch::Session::CookieStore
+
   # Store uploaded files on the local file system in a temporary directory
   config.active_storage.service = :test
 

@@ -20,7 +20,7 @@ Dislike.delete_all
 User.create(email: "ross@hotmail.com", password: "123456", password_confirmation: "123456")
 User.create(email: "pedro@hotmail.com", password: "123456", password_confirmation: "123456")
 
-10.times do
+20.times do
   Playlist.create(
     name: "Music to " + Faker::Verb.base + " to",
     description: "#{Faker::Markdown.emphasis}",
@@ -33,7 +33,7 @@ end
 songs = ["https://www.youtube.com/watch?v=f8aT9oRp95A&t=105s", "https://www.youtube.com/watch?v=f4RVAct8ZDo", "https://www.youtube.com/watch?v=R2F_hGwD26g", "https://www.youtube.com/watch?v=8jzDnsjYv9A"]
 
 i = 0
-10.times do
+20.times do
   playlist_id = Playlist.all[i].id
   i += 1
   x = 0
