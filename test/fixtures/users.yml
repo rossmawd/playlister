@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  listing: one
-  user: one
+  email: MyString
+  password_digest: MyString
 
 two:
-  listing: two
-  user: two
+  email: MyString
+  password_digest: MyString
