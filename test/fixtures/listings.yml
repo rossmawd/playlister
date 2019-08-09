@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  playlist: one
+  url: MyString
+  suggestion: false
+  position: 1
+  name: MyString
+
+two:
+  playlist: two
+  url: MyString
+  suggestion: false
+  position: 1
+  name: MyString
