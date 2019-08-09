@@ -18,6 +18,9 @@ gem 'puma', '~> 3.11'
 
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
+gem 'awesome_print'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -34,6 +37,10 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 group :development do
